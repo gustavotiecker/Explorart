@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol ToursListViewModelCoordinatorDelegate: AnyObject { }
+protocol ToursListViewModelCoordinatorDelegate: AnyObject {
+    func goToTourDetail(_ viewModel: ToursListBusinessLogic, tour: ToursModel.Tour)
+}
 
 protocol ToursListViewModelViewDelegate: AnyObject {
     func onViewStageChanged(_ viewModel: ToursListBusinessLogic, state: ToursListState)
@@ -21,6 +23,9 @@ protocol ToursListBusinessLogic {
     func getToursListSectionFor(_ section: Int) -> ToursListSection
     func getNumberOfSections() -> Int
     func getNumberOfRows(in section: Int) -> Int
+    
+    // MARK: - Navigation
+    func goToTourDetail(of tour: ToursModel.Tour)
 }
 
 final class ToursListViewModel {
@@ -63,5 +68,10 @@ extension ToursListViewModel: ToursListBusinessLogic {
     
     func getNumberOfRows(in section: Int) -> Int {
         return getToursListSectionFor(section).count
+    }
+    
+    // MARK: - Navigation
+    func goToTourDetail(of tour: ToursModel.Tour) {
+        coordinatorDelegate?.goToTourDetail(self, tour: tour)
     }
 }

@@ -62,6 +62,13 @@ extension ToursListViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch viewModel.getToursListSectionFor(indexPath.section) {
+        case .tours(let toursModel):
+            viewModel.goToTourDetail(of: toursModel.data[indexPath.row])
+        }
+    }
 }
 
 extension ToursListViewController: ToursListViewModelViewDelegate {

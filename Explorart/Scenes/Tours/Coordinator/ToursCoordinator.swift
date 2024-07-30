@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 final class ToursCoordinator: Coordinator {
     var navigationController: UINavigationController
@@ -27,4 +28,20 @@ final class ToursCoordinator: Coordinator {
     }
 }
 
-extension ToursCoordinator: ToursListViewModelCoordinatorDelegate {}
+extension ToursCoordinator: ToursListViewModelCoordinatorDelegate {
+    func goToTourDetail(_ viewModel: ToursListBusinessLogic, tour: ToursModel.Tour) {
+        let viewModel = TourDetailViewModel(tour: tour)
+        viewModel.coordinatorDelegate = self
+        let viewController = TourDetailViewController(viewModel: viewModel)
+        viewController.title = "Tour details"
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension ToursCoordinator: TourDetailViewModelCoordinatorDelegate {
+    func presentSafariViewController(_ viewModel: TourDetailViewModel, with url: URL) {
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.preferredControlTintColor = .highlight
+        navigationController.present(safariViewController, animated: true)
+    }
+}
