@@ -15,9 +15,9 @@ final class ToursCoordinator: Coordinator {
     }
     
     func start() {
-        let viewModel = ToursViewModel()
+        let viewModel = ToursListViewModel()
         viewModel.coordinatorDelegate = self
-        let viewController = ToursViewController(viewModel: viewModel)
+        let viewController = ToursListViewController(viewModel: viewModel)
         viewModel.viewDelegate = viewController
         viewController.title = "Tours"
         viewController.tabBarItem = UITabBarItem(title: "Tours",
@@ -27,4 +27,4 @@ final class ToursCoordinator: Coordinator {
     }
 }
 
-extension ToursCoordinator: ToursViewModelCoordinatorDelegate {}
+extension ToursCoordinator: ToursListViewModelCoordinatorDelegate {}

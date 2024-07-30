@@ -5,12 +5,12 @@
 //  Created by Gustavo Tiecker on 29/07/24.
 //
 
-enum ToursState: Equatable {
+enum ToursListState: Equatable {
     case loading
     case loaded
     case error(APIError)
     
-    static func == (lhs: ToursState, rhs: ToursState) -> Bool {
+    static func == (lhs: ToursListState, rhs: ToursListState) -> Bool {
         switch(lhs, rhs) {
         case (.loading, .loading): return true
         case (.loaded, .loaded): return true
@@ -20,7 +20,7 @@ enum ToursState: Equatable {
     }
 }
 
-enum ToursSection: Equatable {
+enum ToursListSection: Equatable {
     
     case tours(ToursModel)
     
@@ -31,7 +31,7 @@ enum ToursSection: Equatable {
         }
     }
     
-    static func == (lhs: ToursSection, rhs: ToursSection) -> Bool {
+    static func == (lhs: ToursListSection, rhs: ToursListSection) -> Bool {
         switch(lhs, rhs) {
         case (.tours, .tours): return true
         }

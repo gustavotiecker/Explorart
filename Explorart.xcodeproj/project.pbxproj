@@ -167,6 +167,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		9328461B2C590B5400D33789 /* ToursList */ = {
+			isa = PBXGroup;
+			children = (
+				932846082C58796300D33789 /* ViewModel */,
+				9372CAB72C55A5780007C01C /* View */,
+			);
+			path = ToursList;
+			sourceTree = "<group>";
+		};
 		9372CA6D2C55A1E20007C01C = {
 			isa = PBXGroup;
 			children = (
@@ -252,10 +261,9 @@
 		9372CAB02C55A4660007C01C /* Tours */ = {
 			isa = PBXGroup;
 			children = (
+				9328461B2C590B5400D33789 /* ToursList */,
 				9328460D2C587A0000D33789 /* Network */,
-				932846082C58796300D33789 /* ViewModel */,
 				9372CAC12C55A7430007C01C /* Coordinator */,
-				9372CAB72C55A5780007C01C /* View */,
 			);
 			path = Tours;
 			sourceTree = "<group>";

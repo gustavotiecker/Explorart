@@ -7,30 +7,30 @@
 
 import UIKit
 
-protocol ToursViewModelCoordinatorDelegate: AnyObject { }
+protocol ToursListViewModelCoordinatorDelegate: AnyObject { }
 
-protocol ToursViewModelViewDelegate: AnyObject {
-    func onViewStageChanged(_ viewModel: ToursBusinessLogic, state: ToursState)
+protocol ToursListViewModelViewDelegate: AnyObject {
+    func onViewStageChanged(_ viewModel: ToursListBusinessLogic, state: ToursListState)
 }
 
-protocol ToursBusinessLogic {
+protocol ToursListBusinessLogic {
     // MARK: - Requests
     func fetchTours()
     
     // MARK: - TableView configuration
-    func getToursSectionFor(_ section: Int) -> ToursSection
+    func getToursListSectionFor(_ section: Int) -> ToursListSection
     func getNumberOfSections() -> Int
     func getNumberOfRows(in section: Int) -> Int
 }
 
-final class ToursViewModel {
+final class ToursListViewModel {
     
     // MARK: - Properties
-    weak var coordinatorDelegate: ToursViewModelCoordinatorDelegate?
-    weak var viewDelegate: ToursViewModelViewDelegate?
+    weak var coordinatorDelegate: ToursListViewModelCoordinatorDelegate?
+    weak var viewDelegate: ToursListViewModelViewDelegate?
     private var service: ToursServiceType
     
-    private var sections: [ToursSection] = []
+    private var sections: [ToursListSection] = []
     
     // MARK: - Initializers
     init(service: ToursServiceType = ToursService()) {
@@ -38,7 +38,7 @@ final class ToursViewModel {
     }
 }
 
-extension ToursViewModel: ToursBusinessLogic {
+extension ToursListViewModel: ToursListBusinessLogic {
     // MARK: - Requests
     func fetchTours() {
         service.fetchTours { result in
@@ -53,7 +53,7 @@ extension ToursViewModel: ToursBusinessLogic {
     }
     
     // MARK: - TableView configuration
-    func getToursSectionFor(_ section: Int) -> ToursSection {
+    func getToursListSectionFor(_ section: Int) -> ToursListSection {
         return sections[section]
     }
     
@@ -62,6 +62,6 @@ extension ToursViewModel: ToursBusinessLogic {
     }
     
     func getNumberOfRows(in section: Int) -> Int {
-        return getToursSectionFor(section).count
+        return getToursListSectionFor(section).count
     }
 }

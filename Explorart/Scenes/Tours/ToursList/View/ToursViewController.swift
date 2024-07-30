@@ -9,9 +9,9 @@ import UIKit
 
 import UIKit
 
-class ToursViewController: UIViewController {
+class ToursListViewController: UIViewController {
     
-    private let viewModel: ToursBusinessLogic
+    private let viewModel: ToursListBusinessLogic
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -26,7 +26,7 @@ class ToursViewController: UIViewController {
     }()
     
     // MARK: - Initializers
-    init(viewModel: ToursBusinessLogic) {
+    init(viewModel: ToursListBusinessLogic) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -41,7 +41,7 @@ class ToursViewController: UIViewController {
     }
 }
 
-extension ToursViewController: UITableViewDelegate, UITableViewDataSource {
+extension ToursListViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         viewModel.getNumberOfSections()
     }
@@ -51,7 +51,7 @@ extension ToursViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch viewModel.getToursSectionFor(indexPath.section) {
+        switch viewModel.getToursListSectionFor(indexPath.section) {
         case .tours(let toursModel):
             if let cell = tableView.dequeueReusableCell(withIdentifier: TourCell.reuseID,
                                                         for: indexPath) as? TourCell {
@@ -64,8 +64,8 @@ extension ToursViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ToursViewController: ToursViewModelViewDelegate {
-    func onViewStageChanged(_ viewModel: any ToursBusinessLogic, state: ToursState) {
+extension ToursListViewController: ToursListViewModelViewDelegate {
+    func onViewStageChanged(_ viewModel: ToursListBusinessLogic, state: ToursListState) {
         DispatchQueue.main.async {
             if case let .error(error) = state {
                 print(error)
@@ -78,7 +78,7 @@ extension ToursViewController: ToursViewModelViewDelegate {
     }
 }
 
-extension ToursViewController: ViewCode {
+extension ToursListViewController: ViewCode {
     func setupComponents() {
         view.addSubview(tableView)
     }
