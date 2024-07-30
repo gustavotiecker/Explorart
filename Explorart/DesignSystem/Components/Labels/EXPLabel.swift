@@ -34,7 +34,7 @@ class EXPLabel: UILabel {
         case .title:
             textColor = .label
             minimumScaleFactor = 0.9
-            lineBreakMode = .byTruncatingTail
+            numberOfLines = 0
         case .secondaryTitle:
             textColor = .secondaryLabel
             minimumScaleFactor = 0.9

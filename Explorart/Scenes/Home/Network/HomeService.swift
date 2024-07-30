@@ -8,16 +8,16 @@
 import UIKit
 
 protocol HomeServiceType {
-    func fetchArtworkOfTheDay(completion: @escaping (Result<Artwork, APIError>) -> Void)
+    func fetchArtworkOfTheDay(completion: @escaping (Result<ArtworksModel.Artwork, APIError>) -> Void)
 }
 
 final class HomeService: EXPService<HomeAPI>, HomeServiceType {
-    func fetchArtworkOfTheDay(completion: @escaping (Result<Artwork, APIError>) -> Void) {
+    func fetchArtworkOfTheDay(completion: @escaping (Result<ArtworksModel.Artwork, APIError>) -> Void) {
         request(endPoint: HomeAPI.artworkOfTheDay.endpoint) { result in
             switch result {
             case .success(let data):
                 do {
-                    let artworks = try JSONDecoder().decode(Artworks.self, from: data)
+                    let artworks = try JSONDecoder().decode(ArtworksModel.self, from: data)
                     if let artwork = artworks.data.first {
                         completion(.success(artwork))
                     } else {

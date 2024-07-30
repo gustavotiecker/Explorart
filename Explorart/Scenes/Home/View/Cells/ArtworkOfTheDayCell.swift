@@ -67,7 +67,7 @@ class ArtworkOfTheDayCell: UITableViewCell {
     required init?(coder: NSCoder) { return nil }
     
     // MARK: - Public methods
-    func setup(with artwork: Artwork) {
+    func setup(with artwork: ArtworksModel.Artwork) {
         titleLabel.text = "Art of the day"
         titleLabel.textColor = .highlight
         artworkTitleLabel.text = artwork.title

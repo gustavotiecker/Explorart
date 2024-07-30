@@ -11,7 +11,7 @@ class MainCoordinator: Coordinator {
     var navigationController: UINavigationController
     var tabBarController: UITabBarController
     var homeCoordinator: HomeCoordinator
-    var artworkListCoordinator: ArtworkListCoordinator
+    var toursCoordinator: ToursCoordinator
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -20,19 +20,20 @@ class MainCoordinator: Coordinator {
         let homeNavigationController = UINavigationController()
         self.homeCoordinator = HomeCoordinator(navigationController: homeNavigationController)
         
-        let artworkListNavigationController = UINavigationController()
-        self.artworkListCoordinator = ArtworkListCoordinator(navigationController: artworkListNavigationController)
+        let toursNavigationController = UINavigationController()
+        self.toursCoordinator = ToursCoordinator(navigationController: toursNavigationController)
     }
     
     func start() {
         homeCoordinator.start()
-        artworkListCoordinator.start()
+        toursCoordinator.start()
         
         tabBarController.viewControllers = [
             homeCoordinator.navigationController,
-            artworkListCoordinator.navigationController,
+            toursCoordinator.navigationController,
         ]
         
+        navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.viewControllers = [tabBarController]
     }
 }

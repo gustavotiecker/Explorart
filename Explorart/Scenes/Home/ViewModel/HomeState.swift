@@ -22,7 +22,7 @@ enum HomeState: Equatable {
 
 enum HomeSection: Equatable {
     
-    case artworkOfTheDay(Artwork)
+    case artworkOfTheDay(ArtworksModel.Artwork)
     
     var count: Int {
         switch self {
@@ -34,7 +34,6 @@ enum HomeSection: Equatable {
     static func == (lhs: HomeSection, rhs: HomeSection) -> Bool {
         switch(lhs, rhs) {
         case (.artworkOfTheDay, .artworkOfTheDay): return true
-        default: return false
         }
     }
 }

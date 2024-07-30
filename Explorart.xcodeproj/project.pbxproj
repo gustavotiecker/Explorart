@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		932846072C584CE500D33789 /* ArtworkOfTheDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846062C584CE500D33789 /* ArtworkOfTheDayView.swift */; };
+		932846072C584CE500D33789 /* ArtworkOfTheDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846062C584CE500D33789 /* ArtworkOfTheDayCell.swift */; };
+		9328460A2C58796D00D33789 /* ToursViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846092C58796D00D33789 /* ToursViewModel.swift */; };
+		9328460C2C5879C200D33789 /* ToursState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328460B2C5879C200D33789 /* ToursState.swift */; };
+		9328460F2C587A1100D33789 /* ToursAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328460E2C587A1100D33789 /* ToursAPI.swift */; };
+		932846112C587A6200D33789 /* ToursService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846102C587A6200D33789 /* ToursService.swift */; };
+		932846142C587AE300D33789 /* ToursModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846132C587AE300D33789 /* ToursModel.swift */; };
+		932846182C58FF8100D33789 /* TourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846172C58FF8100D33789 /* TourCell.swift */; };
+		9328461A2C5903AF00D33789 /* EXPImageDownloaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846192C5903AF00D33789 /* EXPImageDownloaderManager.swift */; };
 		9372CA7A2C55A1E20007C01C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CA792C55A1E20007C01C /* AppDelegate.swift */; };
 		9372CA7C2C55A1E20007C01C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CA7B2C55A1E20007C01C /* SceneDelegate.swift */; };
 		9372CA832C55A1E40007C01C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9372CA822C55A1E40007C01C /* Assets.xcassets */; };
@@ -17,10 +24,10 @@
 		9372CA9D2C55A1E40007C01C /* ExplorartUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CA9C2C55A1E40007C01C /* ExplorartUITestsLaunchTests.swift */; };
 		9372CAB32C55A48F0007C01C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAB22C55A48F0007C01C /* HomeViewController.swift */; };
 		9372CAB62C55A4CB0007C01C /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAB52C55A4CB0007C01C /* ViewCodeProtocol.swift */; };
-		9372CAB92C55A5920007C01C /* ArtworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAB82C55A5920007C01C /* ArtworkListViewController.swift */; };
+		9372CAB92C55A5920007C01C /* ToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAB82C55A5920007C01C /* ToursViewController.swift */; };
 		9372CABD2C55A6210007C01C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CABC2C55A6210007C01C /* Coordinator.swift */; };
 		9372CAC02C55A6CD0007C01C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CABF2C55A6CD0007C01C /* HomeCoordinator.swift */; };
-		9372CAC32C55A7560007C01C /* ArtworkListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAC22C55A7560007C01C /* ArtworkListCoordinator.swift */; };
+		9372CAC32C55A7560007C01C /* ToursCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAC22C55A7560007C01C /* ToursCoordinator.swift */; };
 		9372CAC52C55A8080007C01C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAC42C55A8080007C01C /* MainCoordinator.swift */; };
 		9372CAC72C55ACE80007C01C /* DSNameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAC62C55ACE80007C01C /* DSNameSpace.swift */; };
 		9372CACD2C55B32A0007C01C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CACC2C55B32A0007C01C /* HomeViewModel.swift */; };
@@ -28,7 +35,7 @@
 		9372CAD22C55B4BD0007C01C /* EXPTargetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAD12C55B4BD0007C01C /* EXPTargetAPI.swift */; };
 		9372CAD52C55B55B0007C01C /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAD42C55B55B0007C01C /* HomeAPI.swift */; };
 		9372CAD72C567B100007C01C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAD62C567B0F0007C01C /* HomeService.swift */; };
-		9372CADA2C567C890007C01C /* Artworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAD92C567C890007C01C /* Artworks.swift */; };
+		9372CADA2C567C890007C01C /* ArtworksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAD92C567C890007C01C /* ArtworksModel.swift */; };
 		9372CADC2C567FCB0007C01C /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CADB2C567FCB0007C01C /* HomeState.swift */; };
 		9372CAE22C5683750007C01C /* EXPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAE12C5683750007C01C /* EXPButton.swift */; };
 		9372CAE52C56841A0007C01C /* EXPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAE42C56841A0007C01C /* EXPLabel.swift */; };
@@ -53,7 +60,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		932846062C584CE500D33789 /* ArtworkOfTheDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkOfTheDayView.swift; sourceTree = "<group>"; };
+		932846062C584CE500D33789 /* ArtworkOfTheDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkOfTheDayCell.swift; sourceTree = "<group>"; };
+		932846092C58796D00D33789 /* ToursViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursViewModel.swift; sourceTree = "<group>"; };
+		9328460B2C5879C200D33789 /* ToursState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursState.swift; sourceTree = "<group>"; };
+		9328460E2C587A1100D33789 /* ToursAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursAPI.swift; sourceTree = "<group>"; };
+		932846102C587A6200D33789 /* ToursService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursService.swift; sourceTree = "<group>"; };
+		932846132C587AE300D33789 /* ToursModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursModel.swift; sourceTree = "<group>"; };
+		932846172C58FF8100D33789 /* TourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourCell.swift; sourceTree = "<group>"; };
+		932846192C5903AF00D33789 /* EXPImageDownloaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPImageDownloaderManager.swift; sourceTree = "<group>"; };
 		9372CA762C55A1E20007C01C /* Explorart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Explorart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9372CA792C55A1E20007C01C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9372CA7B2C55A1E20007C01C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,10 +81,10 @@
 		9372CA9C2C55A1E40007C01C /* ExplorartUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorartUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9372CAB22C55A48F0007C01C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9372CAB52C55A4CB0007C01C /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
-		9372CAB82C55A5920007C01C /* ArtworkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkListViewController.swift; sourceTree = "<group>"; };
+		9372CAB82C55A5920007C01C /* ToursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursViewController.swift; sourceTree = "<group>"; };
 		9372CABC2C55A6210007C01C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9372CABF2C55A6CD0007C01C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		9372CAC22C55A7560007C01C /* ArtworkListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkListCoordinator.swift; sourceTree = "<group>"; };
+		9372CAC22C55A7560007C01C /* ToursCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursCoordinator.swift; sourceTree = "<group>"; };
 		9372CAC42C55A8080007C01C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		9372CAC62C55ACE80007C01C /* DSNameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSNameSpace.swift; sourceTree = "<group>"; };
 		9372CACC2C55B32A0007C01C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -78,7 +92,7 @@
 		9372CAD12C55B4BD0007C01C /* EXPTargetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPTargetAPI.swift; sourceTree = "<group>"; };
 		9372CAD42C55B55B0007C01C /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		9372CAD62C567B0F0007C01C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
-		9372CAD92C567C890007C01C /* Artworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artworks.swift; sourceTree = "<group>"; };
+		9372CAD92C567C890007C01C /* ArtworksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksModel.swift; sourceTree = "<group>"; };
 		9372CADB2C567FCB0007C01C /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
 		9372CAE12C5683750007C01C /* EXPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPButton.swift; sourceTree = "<group>"; };
 		9372CAE42C56841A0007C01C /* EXPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPLabel.swift; sourceTree = "<group>"; };
@@ -110,6 +124,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		932846082C58796300D33789 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				932846092C58796D00D33789 /* ToursViewModel.swift */,
+				9328460B2C5879C200D33789 /* ToursState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9328460D2C587A0000D33789 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				932846122C587A7C00D33789 /* Model */,
+				9328460E2C587A1100D33789 /* ToursAPI.swift */,
+				932846102C587A6200D33789 /* ToursService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		932846122C587A7C00D33789 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				932846132C587AE300D33789 /* ToursModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		932846152C587C9100D33789 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				932846062C584CE500D33789 /* ArtworkOfTheDayCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		932846162C587CA800D33789 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				932846172C58FF8100D33789 /* TourCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9372CA6D2C55A1E20007C01C = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +232,7 @@
 		9372CAAE2C55A4510007C01C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				9372CAB02C55A4660007C01C /* ArtworkList */,
+				9372CAB02C55A4660007C01C /* Tours */,
 				9372CAAF2C55A4580007C01C /* Home */,
 			);
 			path = Scenes;
@@ -192,20 +249,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		9372CAB02C55A4660007C01C /* ArtworkList */ = {
+		9372CAB02C55A4660007C01C /* Tours */ = {
 			isa = PBXGroup;
 			children = (
+				9328460D2C587A0000D33789 /* Network */,
+				932846082C58796300D33789 /* ViewModel */,
 				9372CAC12C55A7430007C01C /* Coordinator */,
 				9372CAB72C55A5780007C01C /* View */,
 			);
-			path = ArtworkList;
+			path = Tours;
 			sourceTree = "<group>";
 		};
 		9372CAB12C55A4730007C01C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				932846152C587C9100D33789 /* Cells */,
 				9372CAB22C55A48F0007C01C /* HomeViewController.swift */,
-				932846062C584CE500D33789 /* ArtworkOfTheDayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,7 +281,8 @@
 		9372CAB72C55A5780007C01C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9372CAB82C55A5920007C01C /* ArtworkListViewController.swift */,
+				932846162C587CA800D33789 /* Cells */,
+				9372CAB82C55A5920007C01C /* ToursViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,7 +315,7 @@
 		9372CAC12C55A7430007C01C /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				9372CAC22C55A7560007C01C /* ArtworkListCoordinator.swift */,
+				9372CAC22C55A7560007C01C /* ToursCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -274,6 +334,7 @@
 			children = (
 				9372CACF2C55B43B0007C01C /* EXPService.swift */,
 				9372CAD12C55B4BD0007C01C /* EXPTargetAPI.swift */,
+				932846192C5903AF00D33789 /* EXPImageDownloaderManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -291,7 +352,7 @@
 		9372CAD82C567B780007C01C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9372CAD92C567C890007C01C /* Artworks.swift */,
+				9372CAD92C567C890007C01C /* ArtworksModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,25 +523,32 @@
 			files = (
 				9372CABD2C55A6210007C01C /* Coordinator.swift in Sources */,
 				9372CACD2C55B32A0007C01C /* HomeViewModel.swift in Sources */,
+				9328460A2C58796D00D33789 /* ToursViewModel.swift in Sources */,
+				932846142C587AE300D33789 /* ToursModel.swift in Sources */,
+				9328460C2C5879C200D33789 /* ToursState.swift in Sources */,
 				9372CADC2C567FCB0007C01C /* HomeState.swift in Sources */,
 				9372CAE22C5683750007C01C /* EXPButton.swift in Sources */,
-				9372CAB92C55A5920007C01C /* ArtworkListViewController.swift in Sources */,
+				9372CAB92C55A5920007C01C /* ToursViewController.swift in Sources */,
 				9372CAE52C56841A0007C01C /* EXPLabel.swift in Sources */,
+				9328460F2C587A1100D33789 /* ToursAPI.swift in Sources */,
 				9372CAE82C568C480007C01C /* EXPImageView.swift in Sources */,
 				9372CAC02C55A6CD0007C01C /* HomeCoordinator.swift in Sources */,
 				9372CAC52C55A8080007C01C /* MainCoordinator.swift in Sources */,
 				9372CAC72C55ACE80007C01C /* DSNameSpace.swift in Sources */,
-				9372CADA2C567C890007C01C /* Artworks.swift in Sources */,
+				9372CADA2C567C890007C01C /* ArtworksModel.swift in Sources */,
 				9372CAB32C55A48F0007C01C /* HomeViewController.swift in Sources */,
 				9372CAD52C55B55B0007C01C /* HomeAPI.swift in Sources */,
 				9372CAD22C55B4BD0007C01C /* EXPTargetAPI.swift in Sources */,
 				9372CAD72C567B100007C01C /* HomeService.swift in Sources */,
 				9372CAB62C55A4CB0007C01C /* ViewCodeProtocol.swift in Sources */,
-				932846072C584CE500D33789 /* ArtworkOfTheDayView.swift in Sources */,
+				9328461A2C5903AF00D33789 /* EXPImageDownloaderManager.swift in Sources */,
+				932846182C58FF8100D33789 /* TourCell.swift in Sources */,
+				932846072C584CE500D33789 /* ArtworkOfTheDayCell.swift in Sources */,
 				9372CA7A2C55A1E20007C01C /* AppDelegate.swift in Sources */,
 				9372CAD02C55B43B0007C01C /* EXPService.swift in Sources */,
 				9372CA7C2C55A1E20007C01C /* SceneDelegate.swift in Sources */,
-				9372CAC32C55A7560007C01C /* ArtworkListCoordinator.swift in Sources */,
+				9372CAC32C55A7560007C01C /* ToursCoordinator.swift in Sources */,
+				932846112C587A6200D33789 /* ToursService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
