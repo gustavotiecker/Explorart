@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 final class HomeCoordinator: Coordinator {
     var navigationController: UINavigationController
@@ -15,11 +16,22 @@ final class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = HomeViewController()
+        let viewModel = HomeViewModel()
+        viewModel.coordinatorDelegate = self
+        let viewController = HomeViewController(viewModel: viewModel)
+        viewModel.viewDelegate = viewController
         viewController.title = "Home"
         viewController.tabBarItem = UITabBarItem(title: "Home",
                                                  image: UIImage(systemName: "house"),
                                                  tag: 0)
         navigationController.pushViewController(viewController, animated: false)
+    }
+}
+
+extension HomeCoordinator: HomeViewModelCoordinatorDelegate {
+    func presentSafariViewController(_ viewModel: any HomeBusinessLogic, with url: URL) {
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.preferredControlTintColor = .highlight
+        navigationController.present(safariViewController, animated: true)
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		932846072C584CE500D33789 /* ArtworkOfTheDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846062C584CE500D33789 /* ArtworkOfTheDayView.swift */; };
 		9372CA7A2C55A1E20007C01C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CA792C55A1E20007C01C /* AppDelegate.swift */; };
 		9372CA7C2C55A1E20007C01C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CA7B2C55A1E20007C01C /* SceneDelegate.swift */; };
 		9372CA832C55A1E40007C01C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9372CA822C55A1E40007C01C /* Assets.xcassets */; };
@@ -22,6 +23,16 @@
 		9372CAC32C55A7560007C01C /* ArtworkListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAC22C55A7560007C01C /* ArtworkListCoordinator.swift */; };
 		9372CAC52C55A8080007C01C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAC42C55A8080007C01C /* MainCoordinator.swift */; };
 		9372CAC72C55ACE80007C01C /* DSNameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAC62C55ACE80007C01C /* DSNameSpace.swift */; };
+		9372CACD2C55B32A0007C01C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CACC2C55B32A0007C01C /* HomeViewModel.swift */; };
+		9372CAD02C55B43B0007C01C /* EXPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CACF2C55B43B0007C01C /* EXPService.swift */; };
+		9372CAD22C55B4BD0007C01C /* EXPTargetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAD12C55B4BD0007C01C /* EXPTargetAPI.swift */; };
+		9372CAD52C55B55B0007C01C /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAD42C55B55B0007C01C /* HomeAPI.swift */; };
+		9372CAD72C567B100007C01C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAD62C567B0F0007C01C /* HomeService.swift */; };
+		9372CADA2C567C890007C01C /* Artworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAD92C567C890007C01C /* Artworks.swift */; };
+		9372CADC2C567FCB0007C01C /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CADB2C567FCB0007C01C /* HomeState.swift */; };
+		9372CAE22C5683750007C01C /* EXPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAE12C5683750007C01C /* EXPButton.swift */; };
+		9372CAE52C56841A0007C01C /* EXPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAE42C56841A0007C01C /* EXPLabel.swift */; };
+		9372CAE82C568C480007C01C /* EXPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CAE72C568C480007C01C /* EXPImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		932846062C584CE500D33789 /* ArtworkOfTheDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkOfTheDayView.swift; sourceTree = "<group>"; };
 		9372CA762C55A1E20007C01C /* Explorart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Explorart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9372CA792C55A1E20007C01C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9372CA7B2C55A1E20007C01C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +73,16 @@
 		9372CAC22C55A7560007C01C /* ArtworkListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkListCoordinator.swift; sourceTree = "<group>"; };
 		9372CAC42C55A8080007C01C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		9372CAC62C55ACE80007C01C /* DSNameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSNameSpace.swift; sourceTree = "<group>"; };
+		9372CACC2C55B32A0007C01C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9372CACF2C55B43B0007C01C /* EXPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPService.swift; sourceTree = "<group>"; };
+		9372CAD12C55B4BD0007C01C /* EXPTargetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPTargetAPI.swift; sourceTree = "<group>"; };
+		9372CAD42C55B55B0007C01C /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		9372CAD62C567B0F0007C01C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		9372CAD92C567C890007C01C /* Artworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artworks.swift; sourceTree = "<group>"; };
+		9372CADB2C567FCB0007C01C /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
+		9372CAE12C5683750007C01C /* EXPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPButton.swift; sourceTree = "<group>"; };
+		9372CAE42C56841A0007C01C /* EXPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPLabel.swift; sourceTree = "<group>"; };
+		9372CAE72C568C480007C01C /* EXPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +166,7 @@
 		9372CAA92C55A3D10007C01C /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				9372CADF2C56835B0007C01C /* Components */,
 				9372CAB42C55A4BC0007C01C /* Foundation */,
 			);
 			path = DesignSystem;
@@ -161,6 +184,8 @@
 		9372CAAF2C55A4580007C01C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9372CAD32C55B54B0007C01C /* Network */,
+				9372CACB2C55B2DD0007C01C /* ViewModel */,
 				9372CABE2C55A6320007C01C /* Coordinator */,
 				9372CAB12C55A4730007C01C /* View */,
 			);
@@ -180,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				9372CAB22C55A48F0007C01C /* HomeViewController.swift */,
+				932846062C584CE500D33789 /* ArtworkOfTheDayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +230,7 @@
 		9372CABA2C55A5FD0007C01C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9372CACE2C55B41D0007C01C /* Network */,
 				9372CABB2C55A6070007C01C /* Coordinator */,
 			);
 			path = Core;
@@ -231,6 +258,76 @@
 				9372CAC22C55A7560007C01C /* ArtworkListCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9372CACB2C55B2DD0007C01C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9372CACC2C55B32A0007C01C /* HomeViewModel.swift */,
+				9372CADB2C567FCB0007C01C /* HomeState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9372CACE2C55B41D0007C01C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9372CACF2C55B43B0007C01C /* EXPService.swift */,
+				9372CAD12C55B4BD0007C01C /* EXPTargetAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9372CAD32C55B54B0007C01C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9372CAD82C567B780007C01C /* Model */,
+				9372CAD42C55B55B0007C01C /* HomeAPI.swift */,
+				9372CAD62C567B0F0007C01C /* HomeService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9372CAD82C567B780007C01C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9372CAD92C567C890007C01C /* Artworks.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9372CADF2C56835B0007C01C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9372CAE62C568C3D0007C01C /* ImageViews */,
+				9372CAE32C5683FC0007C01C /* Labels */,
+				9372CAE02C5683680007C01C /* Buttons */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9372CAE02C5683680007C01C /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9372CAE12C5683750007C01C /* EXPButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		9372CAE32C5683FC0007C01C /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				9372CAE42C56841A0007C01C /* EXPLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		9372CAE62C568C3D0007C01C /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				9372CAE72C568C480007C01C /* EXPImageView.swift */,
+			);
+			path = ImageViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,13 +461,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9372CABD2C55A6210007C01C /* Coordinator.swift in Sources */,
+				9372CACD2C55B32A0007C01C /* HomeViewModel.swift in Sources */,
+				9372CADC2C567FCB0007C01C /* HomeState.swift in Sources */,
+				9372CAE22C5683750007C01C /* EXPButton.swift in Sources */,
 				9372CAB92C55A5920007C01C /* ArtworkListViewController.swift in Sources */,
+				9372CAE52C56841A0007C01C /* EXPLabel.swift in Sources */,
+				9372CAE82C568C480007C01C /* EXPImageView.swift in Sources */,
 				9372CAC02C55A6CD0007C01C /* HomeCoordinator.swift in Sources */,
 				9372CAC52C55A8080007C01C /* MainCoordinator.swift in Sources */,
 				9372CAC72C55ACE80007C01C /* DSNameSpace.swift in Sources */,
+				9372CADA2C567C890007C01C /* Artworks.swift in Sources */,
 				9372CAB32C55A48F0007C01C /* HomeViewController.swift in Sources */,
+				9372CAD52C55B55B0007C01C /* HomeAPI.swift in Sources */,
+				9372CAD22C55B4BD0007C01C /* EXPTargetAPI.swift in Sources */,
+				9372CAD72C567B100007C01C /* HomeService.swift in Sources */,
 				9372CAB62C55A4CB0007C01C /* ViewCodeProtocol.swift in Sources */,
+				932846072C584CE500D33789 /* ArtworkOfTheDayView.swift in Sources */,
 				9372CA7A2C55A1E20007C01C /* AppDelegate.swift in Sources */,
+				9372CAD02C55B43B0007C01C /* EXPService.swift in Sources */,
 				9372CA7C2C55A1E20007C01C /* SceneDelegate.swift in Sources */,
 				9372CAC32C55A7560007C01C /* ArtworkListCoordinator.swift in Sources */,
 			);
