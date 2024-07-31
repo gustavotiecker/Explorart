@@ -32,17 +32,15 @@ struct ToursModel: Codable {
     // MARK: - Tour
     struct Tour: Codable {
         let id: Int
-        let apiModel: String
-        let apiLink: String
         let title: String
         let image: String
         let description: String
 
         enum CodingKeys: String, CodingKey {
             case id
-            case apiModel = "api_model"
-            case apiLink = "api_link"
-            case title, image, description
+            case title
+            case image
+            case description
         }
     }
 

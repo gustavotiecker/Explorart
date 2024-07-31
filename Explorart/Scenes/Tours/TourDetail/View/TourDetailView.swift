@@ -54,9 +54,7 @@ struct TourDetailView: View {
 
 #Preview {
     TourDetailView(viewModel: TourDetailViewModel(
-        tour: ToursModel.Tour(id: 1, 
-                              apiModel: "",
-                              apiLink: "",
+        tour: ToursModel.Tour(id: 1,
                               title: "Multisensory Tour",
                               image: "",
                               description: "Travel back in time through the magic of the Thorne Rooms."))

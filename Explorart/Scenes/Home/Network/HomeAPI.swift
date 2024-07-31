@@ -21,7 +21,7 @@ extension HomeAPI: EXPTargetAPI {
         switch self {
         case .artworkOfTheDay:
             /// Simulando uma obra de arte "randômica" do dia
-            return "/artworks?limit=2"
+            return "/artworks?limit=1"
         }
     }
 }
