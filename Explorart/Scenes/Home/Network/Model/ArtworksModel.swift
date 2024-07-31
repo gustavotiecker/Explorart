@@ -31,34 +31,15 @@ struct ArtworksModel: Codable {
     // MARK: - Artwork
     struct Artwork: Codable {
         let id: Int
-        let apiModel: String
-        let apiLink: String
-        let isBoosted: Bool
         let title: String
-        let altTitles: String?
-        let thumbnail: Thumbnail
         let artistDisplay: String?
         let placeOfOrigin: String?
 
         enum CodingKeys: String, CodingKey {
             case id
-            case apiModel = "api_model"
-            case apiLink = "api_link"
-            case isBoosted = "is_boosted"
             case title
-            case altTitles = "alt_titles"
-            case thumbnail
             case artistDisplay = "artist_display"
             case placeOfOrigin = "place_of_origin"
-        }
-    }
-
-    // Thumbnail model
-    struct Thumbnail: Codable {
-        let lqip: String
-
-        enum CodingKeys: String, CodingKey {
-            case lqip
         }
     }
 

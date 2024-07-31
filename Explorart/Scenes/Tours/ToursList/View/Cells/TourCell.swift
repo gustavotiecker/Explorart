@@ -18,13 +18,15 @@ class TourCell: UITableViewCell {
         stackView.alignment = .fill
         stackView.distribution = .fill
         stackView.axis = .horizontal
-        stackView.spacing = 16
+        stackView.spacing = .dsSpacing(.small)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
     private let tourImageView = EXPImageView(frame: .zero)
-    private let titleLabel = EXPLabel(style: .title, textAlignment: .left, fontSize: 18)
+    private let titleLabel = EXPLabel(style: .title, 
+                                      textAlignment: .left,
+                                      fontSize: .dsTypography(.secondaryTitleMedium))
     
     // MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -47,17 +49,16 @@ class TourCell: UITableViewCell {
 
 extension TourCell: ViewCode {
     func setupComponents() {
-        stackView.addArrangedSubview(tourImageView)
-        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubviews(tourImageView, titleLabel)
         contentView.addSubview(stackView)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: .dsSpacing(.small)),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: .dsSpacing(.small)),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -.dsSpacing(.small)),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -.dsSpacing(.small)),
             
             tourImageView.widthAnchor.constraint(equalToConstant: 48),
             tourImageView.heightAnchor.constraint(equalToConstant: 48),

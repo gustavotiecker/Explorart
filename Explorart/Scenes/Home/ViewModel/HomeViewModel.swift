@@ -22,7 +22,7 @@ protocol HomeViewModelViewDelegate: AnyObject {
 
 protocol HomeBusinessLogic {
     // MARK: - Requests
-    func fetchArtworks()
+    func fetchArtworkOfTheDay()
     
     // MARK: - TableView configuration
     func getHomeSectionFor(_ section: Int) -> HomeSection
@@ -43,6 +43,10 @@ final class HomeViewModel {
     
     private var sections: [HomeSection] = []
     
+    private(set) var state: HomeState = .loading {
+        didSet { viewDelegate?.onViewStageChanged(self, state: state) }
+    }
+    
     // MARK: - Initializers
     init(service: HomeServiceType = HomeService()) {
         self.service = service
@@ -51,15 +55,15 @@ final class HomeViewModel {
 
 extension HomeViewModel: HomeBusinessLogic {
     // MARK: - Requests
-    func fetchArtworks() {
-        viewDelegate?.onViewStageChanged(self, state: .loading)
+    func fetchArtworkOfTheDay() {
+        state = .loading
         service.fetchArtworkOfTheDay { result in
             switch result {
             case .success(let artwork):
                 self.sections.append(.artworkOfTheDay(artwork))
-                self.viewDelegate?.onViewStageChanged(self, state: .loaded)
+                self.state = .loaded
             case .failure(let error):
-                self.viewDelegate?.onViewStageChanged(self, state: .error(error))
+                self.state = .error(error)
             }
         }
     }
@@ -88,6 +92,6 @@ extension HomeViewModel: HomeBusinessLogic {
                                           title: "Error",
                                           message: error.rawValue,
                                           buttonTitle: "Try again", 
-                                          buttonAction: fetchArtworks)
+                                          buttonAction: fetchArtworkOfTheDay)
     }
 }

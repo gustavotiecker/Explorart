@@ -97,9 +97,3 @@ extension EXPAlertViewController: ViewCode {
         messageLabel.numberOfLines = 4
     }
 }
-
-extension UIView {
-    func addSubviews(_ views: UIView...) {
-        for view in views { addSubview(view) }
-    }
-}

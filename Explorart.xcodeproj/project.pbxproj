@@ -20,6 +20,13 @@
 		932846242C590E2000D33789 /* TourDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846232C590E2000D33789 /* TourDetailViewModel.swift */; };
 		932846262C59B2E500D33789 /* EPXSUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846252C59B2E500D33789 /* EPXSUIButton.swift */; };
 		932846292C59B4FC00D33789 /* EXPAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846282C59B4FC00D33789 /* EXPAlertViewController.swift */; };
+		9328462C2C59BCE800D33789 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328462B2C59BCE800D33789 /* Extensions.swift */; };
+		9328462F2C59BEE700D33789 /* DS+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328462E2C59BEE600D33789 /* DS+Spacing.swift */; };
+		932846322C59BFEE00D33789 /* DS+Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846312C59BFEE00D33789 /* DS+Typography.swift */; };
+		932846362C59C1AA00D33789 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846352C59C1AA00D33789 /* HomeViewModelTests.swift */; };
+		9328463A2C59C25E00D33789 /* HomeServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932846392C59C25E00D33789 /* HomeServiceSpy.swift */; };
+		9328463D2C59C4E000D33789 /* HomeViewModelCoordinatorDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328463C2C59C4E000D33789 /* HomeViewModelCoordinatorDelegateMock.swift */; };
+		932846402C59C88300D33789 /* Artwork+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328463F2C59C88300D33789 /* Artwork+Fixtures.swift */; };
 		9372CA7A2C55A1E20007C01C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CA792C55A1E20007C01C /* AppDelegate.swift */; };
 		9372CA7C2C55A1E20007C01C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372CA7B2C55A1E20007C01C /* SceneDelegate.swift */; };
 		9372CA832C55A1E40007C01C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9372CA822C55A1E40007C01C /* Assets.xcassets */; };
@@ -78,6 +85,13 @@
 		932846232C590E2000D33789 /* TourDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailViewModel.swift; sourceTree = "<group>"; };
 		932846252C59B2E500D33789 /* EPXSUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPXSUIButton.swift; sourceTree = "<group>"; };
 		932846282C59B4FC00D33789 /* EXPAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPAlertViewController.swift; sourceTree = "<group>"; };
+		9328462B2C59BCE800D33789 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9328462E2C59BEE600D33789 /* DS+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DS+Spacing.swift"; sourceTree = "<group>"; };
+		932846312C59BFEE00D33789 /* DS+Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DS+Typography.swift"; sourceTree = "<group>"; };
+		932846352C59C1AA00D33789 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		932846392C59C25E00D33789 /* HomeServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceSpy.swift; sourceTree = "<group>"; };
+		9328463C2C59C4E000D33789 /* HomeViewModelCoordinatorDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelCoordinatorDelegateMock.swift; sourceTree = "<group>"; };
+		9328463F2C59C88300D33789 /* Artwork+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Artwork+Fixtures.swift"; sourceTree = "<group>"; };
 		9372CA762C55A1E20007C01C /* Explorart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Explorart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9372CA792C55A1E20007C01C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9372CA7B2C55A1E20007C01C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +234,81 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		9328462A2C59BCDF00D33789 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9328462B2C59BCE800D33789 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9328462D2C59BEDB00D33789 /* Spacing */ = {
+			isa = PBXGroup;
+			children = (
+				9328462E2C59BEE600D33789 /* DS+Spacing.swift */,
+			);
+			path = Spacing;
+			sourceTree = "<group>";
+		};
+		932846302C59BFDD00D33789 /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				932846312C59BFEE00D33789 /* DS+Typography.swift */,
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		932846332C59C18E00D33789 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				932846342C59C19F00D33789 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		932846342C59C19F00D33789 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9328463E2C59C81E00D33789 /* Fixtures */,
+				932846372C59C24900D33789 /* Mocks */,
+				932846352C59C1AA00D33789 /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		932846372C59C24900D33789 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9328463B2C59C4BE00D33789 /* Protocols */,
+				932846382C59C24E00D33789 /* Doubles */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		932846382C59C24E00D33789 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				932846392C59C25E00D33789 /* HomeServiceSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		9328463B2C59C4BE00D33789 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9328463C2C59C4E000D33789 /* HomeViewModelCoordinatorDelegateMock.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9328463E2C59C81E00D33789 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				9328463F2C59C88300D33789 /* Artwork+Fixtures.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		9372CA6D2C55A1E20007C01C = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +348,7 @@
 		9372CA8F2C55A1E40007C01C /* ExplorartTests */ = {
 			isa = PBXGroup;
 			children = (
+				932846332C59C18E00D33789 /* Scenes */,
 				9372CA902C55A1E40007C01C /* ExplorartTests.swift */,
 			);
 			path = ExplorartTests;
@@ -325,6 +415,8 @@
 		9372CAB42C55A4BC0007C01C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				932846302C59BFDD00D33789 /* Typography */,
+				9328462D2C59BEDB00D33789 /* Spacing */,
 				9372CAC62C55ACE80007C01C /* DSNameSpace.swift */,
 				9372CAB52C55A4CB0007C01C /* ViewCodeProtocol.swift */,
 			);
@@ -343,6 +435,7 @@
 		9372CABA2C55A5FD0007C01C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9328462A2C59BCDF00D33789 /* Utils */,
 				9372CACE2C55B41D0007C01C /* Network */,
 				9372CABB2C55A6070007C01C /* Coordinator */,
 			);
@@ -592,8 +685,10 @@
 				9372CAC52C55A8080007C01C /* MainCoordinator.swift in Sources */,
 				9372CAC72C55ACE80007C01C /* DSNameSpace.swift in Sources */,
 				9372CADA2C567C890007C01C /* ArtworksModel.swift in Sources */,
+				9328462F2C59BEE700D33789 /* DS+Spacing.swift in Sources */,
 				9372CAB32C55A48F0007C01C /* HomeViewController.swift in Sources */,
 				9372CAD52C55B55B0007C01C /* HomeAPI.swift in Sources */,
+				932846322C59BFEE00D33789 /* DS+Typography.swift in Sources */,
 				932846222C590D4F00D33789 /* TourDetailView.swift in Sources */,
 				9372CAD22C55B4BD0007C01C /* EXPTargetAPI.swift in Sources */,
 				932846202C590CE200D33789 /* TourDetailViewController.swift in Sources */,
@@ -603,6 +698,7 @@
 				9328461A2C5903AF00D33789 /* EXPImageDownloaderManager.swift in Sources */,
 				932846182C58FF8100D33789 /* TourCell.swift in Sources */,
 				932846072C584CE500D33789 /* ArtworkOfTheDayCell.swift in Sources */,
+				9328462C2C59BCE800D33789 /* Extensions.swift in Sources */,
 				9372CA7A2C55A1E20007C01C /* AppDelegate.swift in Sources */,
 				9372CAD02C55B43B0007C01C /* EXPService.swift in Sources */,
 				9372CA7C2C55A1E20007C01C /* SceneDelegate.swift in Sources */,
@@ -616,7 +712,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9328463A2C59C25E00D33789 /* HomeServiceSpy.swift in Sources */,
 				9372CA912C55A1E40007C01C /* ExplorartTests.swift in Sources */,
+				932846362C59C1AA00D33789 /* HomeViewModelTests.swift in Sources */,
+				932846402C59C88300D33789 /* Artwork+Fixtures.swift in Sources */,
+				9328463D2C59C4E000D33789 /* HomeViewModelCoordinatorDelegateMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

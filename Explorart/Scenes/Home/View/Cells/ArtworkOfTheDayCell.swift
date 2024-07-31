@@ -35,16 +35,24 @@ class ArtworkOfTheDayCell: UITableViewCell {
         stackView.alignment = .fill
         stackView.distribution = .fill
         stackView.axis = .vertical
-        stackView.spacing = 16
+        stackView.spacing = .dsSpacing(.small)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
-    private let titleLabel = EXPLabel(style: .title, textAlignment: .left, fontSize: 22)
+    private let titleLabel = EXPLabel(style: .title, 
+                                      textAlignment: .left,
+                                      fontSize: .dsTypography(.titleLarge))
     private let artworkImageView = EXPImageView(frame: .zero)
-    private let artworkTitleLabel = EXPLabel(style: .title, textAlignment: .center, fontSize: 18)
-    private let artistNameLabel = EXPLabel(style: .secondaryTitle, textAlignment: .center, fontSize: 16)
-    private let placeOfOriginLabel = EXPLabel(style: .secondaryTitle, textAlignment: .center, fontSize: 14)
+    private let artworkTitleLabel = EXPLabel(style: .title, 
+                                             textAlignment: .center,
+                                             fontSize: .dsTypography(.titleMedium))
+    private let artistNameLabel = EXPLabel(style: .secondaryTitle, 
+                                           textAlignment: .center,
+                                           fontSize: .dsTypography(.secondaryTitleLarge))
+    private let placeOfOriginLabel = EXPLabel(style: .secondaryTitle, 
+                                              textAlignment: .center,
+                                              fontSize: .dsTypography(.secondaryTitleMedium))
 
     private lazy var moreInfoButton: EXPButton = {
         let button = EXPButton(title: "More info")
@@ -87,27 +95,27 @@ class ArtworkOfTheDayCell: UITableViewCell {
 
 extension ArtworkOfTheDayCell: ViewCode {
     func setupComponents() {
-        stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(artworkImageView)
-        stackView.addArrangedSubview(artworkTitleLabel)
-        stackView.addArrangedSubview(artistNameLabel)
-        stackView.addArrangedSubview(placeOfOriginLabel)
-        stackView.addArrangedSubview(moreInfoButton)
+        stackView.addArrangedSubviews(titleLabel,
+                                      artworkImageView,
+                                      artworkTitleLabel,
+                                      artistNameLabel,
+                                      placeOfOriginLabel,
+                                      moreInfoButton)
         cardView.addSubview(stackView)
         contentView.addSubview(cardView)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            cardView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            cardView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+            cardView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: .dsSpacing(.small)),
+            cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: .dsSpacing(.small)),
+            cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -.dsSpacing(.small)),
+            cardView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -.dsSpacing(.small)),
             
-            stackView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 16),
-            stackView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 16),
-            stackView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -16),
-            stackView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -16),
+            stackView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: .dsSpacing(.small)),
+            stackView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: .dsSpacing(.small)),
+            stackView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -.dsSpacing(.small)),
+            stackView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -.dsSpacing(.small)),
             
             moreInfoButton.heightAnchor.constraint(equalToConstant: 56),
             artworkImageView.widthAnchor.constraint(equalToConstant: 200),

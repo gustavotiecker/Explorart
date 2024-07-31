@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewCode()
-        viewModel.fetchArtworks()
+        viewModel.fetchArtworkOfTheDay()
     }
     
     override func viewDidLayoutSubviews() {
