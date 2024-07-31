@@ -23,6 +23,8 @@ class HomeViewController: UIViewController {
         return tableView
     }()
     
+    private lazy var spinner = UIActivityIndicatorView(style: .large)
+    
     // MARK: - Initializers
     init(viewModel: HomeBusinessLogic) {
         self.viewModel = viewModel
@@ -76,12 +78,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController: HomeViewModelViewDelegate {
     func onViewStageChanged(_ viewModel: any HomeBusinessLogic, state: HomeState) {
         DispatchQueue.main.async {
-            if case let .error(error) = state {
-                print(error)
-            }
+            self.tableView.reloadData()
             
-            if state == .loaded {
-                self.tableView.reloadData()
+            switch state {
+            case .loading:
+                self.spinner.startAnimating()
+                self.tableView.backgroundView = self.spinner
+            case .loaded:
+                self.spinner.stopAnimating()
+                self.spinner.removeFromSuperview()
+            case .error(let error):
+                self.viewModel.presentAlert(for: error)
             }
         }
     }

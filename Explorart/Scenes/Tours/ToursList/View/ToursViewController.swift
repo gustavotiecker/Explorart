@@ -25,6 +25,8 @@ class ToursListViewController: UIViewController {
         return tableView
     }()
     
+    private lazy var spinner = UIActivityIndicatorView(style: .large)
+    
     // MARK: - Initializers
     init(viewModel: ToursListBusinessLogic) {
         self.viewModel = viewModel
@@ -74,12 +76,17 @@ extension ToursListViewController: UITableViewDelegate, UITableViewDataSource {
 extension ToursListViewController: ToursListViewModelViewDelegate {
     func onViewStageChanged(_ viewModel: ToursListBusinessLogic, state: ToursListState) {
         DispatchQueue.main.async {
-            if case let .error(error) = state {
-                print(error)
-            }
+            self.tableView.reloadData()
             
-            if state == .loaded {
-                self.tableView.reloadData()
+            switch state {
+            case .loading:
+                self.spinner.startAnimating()
+                self.tableView.backgroundView = self.spinner
+            case .loaded:
+                self.spinner.stopAnimating()
+                self.spinner.removeFromSuperview()
+            case .error(let error):
+                self.viewModel.presentAlert(for: error)
             }
         }
     }

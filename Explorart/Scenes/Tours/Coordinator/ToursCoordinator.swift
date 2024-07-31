@@ -36,6 +36,22 @@ extension ToursCoordinator: ToursListViewModelCoordinatorDelegate {
         viewController.title = "Tour details"
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func presentAlert(_ viewModel: ToursListBusinessLogic,
+                      title: String,
+                      message: String,
+                      buttonTitle: String,
+                      buttonAction: (() -> Void)? = nil) {
+        DispatchQueue.main.async {
+            let alertViewController = EXPAlertViewController(title: title,
+                                                             message: message,
+                                                             buttonTitle: buttonTitle,
+                                                             buttonAction: buttonAction)
+            alertViewController.modalPresentationStyle = .overFullScreen
+            alertViewController.modalTransitionStyle = .crossDissolve
+            self.navigationController.present(alertViewController, animated: true)
+        }
+    }
 }
 
 extension ToursCoordinator: TourDetailViewModelCoordinatorDelegate {

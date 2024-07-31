@@ -9,6 +9,11 @@ import UIKit
 
 protocol HomeViewModelCoordinatorDelegate: AnyObject {
     func presentSafariViewController(_ viewModel: HomeBusinessLogic, with url: URL)
+    func presentAlert(_ viewModel: HomeBusinessLogic,
+                      title: String,
+                      message: String,
+                      buttonTitle: String,
+                      buttonAction: (() -> Void)?)
 }
 
 protocol HomeViewModelViewDelegate: AnyObject {
@@ -26,6 +31,7 @@ protocol HomeBusinessLogic {
     
     // MARK: - Navigation
     func goToMoreInfo()
+    func presentAlert(for error: APIError)
 }
 
 final class HomeViewModel {
@@ -46,6 +52,7 @@ final class HomeViewModel {
 extension HomeViewModel: HomeBusinessLogic {
     // MARK: - Requests
     func fetchArtworks() {
+        viewDelegate?.onViewStageChanged(self, state: .loading)
         service.fetchArtworkOfTheDay { result in
             switch result {
             case .success(let artwork):
@@ -74,5 +81,13 @@ extension HomeViewModel: HomeBusinessLogic {
     func goToMoreInfo() {
         guard let url = URL(string: "https://www.artic.edu") else { return }
         coordinatorDelegate?.presentSafariViewController(self, with: url)
+    }
+    
+    func presentAlert(for error: APIError) {
+        coordinatorDelegate?.presentAlert(self,
+                                          title: "Error",
+                                          message: error.rawValue,
+                                          buttonTitle: "Try again", 
+                                          buttonAction: fetchArtworks)
     }
 }

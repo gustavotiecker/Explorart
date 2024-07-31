@@ -17,9 +17,9 @@ class EXPButton: UIButton {
     @available(*, unavailable)
     required init?(coder: NSCoder) { return nil }
     
-    convenience init(title: String) {
+    convenience init(backgroundColor: UIColor = .accent, title: String) {
         self.init(frame: .zero)
-        self.backgroundColor = .accent
+        self.backgroundColor = backgroundColor
         self.setTitle(title, for: .normal)
     }
     

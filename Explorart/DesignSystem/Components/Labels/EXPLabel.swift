@@ -41,7 +41,6 @@ class EXPLabel: UILabel {
             numberOfLines = 0
         case .body:
             textColor = .secondaryLabel
-            font = UIFont.preferredFont(forTextStyle: .body)
             adjustsFontForContentSizeCategory = true
             minimumScaleFactor = 0.75
             lineBreakMode = .byWordWrapping

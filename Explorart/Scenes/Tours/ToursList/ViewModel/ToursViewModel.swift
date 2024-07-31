@@ -9,6 +9,11 @@ import UIKit
 
 protocol ToursListViewModelCoordinatorDelegate: AnyObject {
     func goToTourDetail(_ viewModel: ToursListBusinessLogic, tour: ToursModel.Tour)
+    func presentAlert(_ viewModel: ToursListBusinessLogic,
+                      title: String,
+                      message: String,
+                      buttonTitle: String,
+                      buttonAction: (() -> Void)?)
 }
 
 protocol ToursListViewModelViewDelegate: AnyObject {
@@ -26,6 +31,7 @@ protocol ToursListBusinessLogic {
     
     // MARK: - Navigation
     func goToTourDetail(of tour: ToursModel.Tour)
+    func presentAlert(for error: APIError)
 }
 
 final class ToursListViewModel {
@@ -46,6 +52,7 @@ final class ToursListViewModel {
 extension ToursListViewModel: ToursListBusinessLogic {
     // MARK: - Requests
     func fetchTours() {
+        viewDelegate?.onViewStageChanged(self, state: .loading)
         service.fetchTours { result in
             switch result {
             case .success(let toursModel):
@@ -73,5 +80,13 @@ extension ToursListViewModel: ToursListBusinessLogic {
     // MARK: - Navigation
     func goToTourDetail(of tour: ToursModel.Tour) {
         coordinatorDelegate?.goToTourDetail(self, tour: tour)
+    }
+
+    func presentAlert(for error: APIError) {
+        coordinatorDelegate?.presentAlert(self,
+                                          title: "Error",
+                                          message: error.rawValue,
+                                          buttonTitle: "Try again",
+                                          buttonAction: fetchTours)
     }
 }
